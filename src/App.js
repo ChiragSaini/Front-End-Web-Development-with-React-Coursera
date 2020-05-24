@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { Navbar , NavbarBrand } from 'reactstrap';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome TO React, MADAFAKA</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://chiragsaini.github.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Portfolio
-        </a>
-      </header>
-    </div>
+      <Navbar dark color='primary'>
+        <div className="container">
+          <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+        </div>
+      </Navbar>
+    </div >
   );
 }
 
