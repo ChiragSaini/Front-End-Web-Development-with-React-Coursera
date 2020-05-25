@@ -14,10 +14,10 @@ class DishDetail extends Component {
                     <p>-- {comment.author},
                     &nbsp;
                     {new Intl.DateTimeFormat('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: '2-digit'
-                        }).format(new Date(comment.date))}
+                        year: 'numeric',
+                        month: 'short',
+                        day: '2-digit'
+                    }).format(new Date(comment.date))}
                     </p>
                 </li>
             )
@@ -28,7 +28,6 @@ class DishDetail extends Component {
                 <ul className='list-unstyled'>
                     {cmnts}
                 </ul>
-
             </div>
         )
     }
@@ -60,9 +59,11 @@ class DishDetail extends Component {
         const dishItem = this.renderDish(dish)
         const commentItem = this.renderComments(dish.comments)
         return (
-            <div className='row'>
-                {dishItem}
-                {commentItem}
+            <div className="container">
+                <div className='row'>
+                    {dishItem}
+                    {commentItem}
+                </div>
             </div>
         )
     }
