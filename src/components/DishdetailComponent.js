@@ -31,6 +31,7 @@ class CommentForm extends Component {
         this.toggleModal();
         console.log('comment:', values);
         alert('comment:' + JSON.stringify(values));
+        // alert(this.rating.value)
     }
 
     render() {
